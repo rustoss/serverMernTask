@@ -12,8 +12,8 @@ app.use(express.json({ extended: true }))
 
 // Importar rutas
 app.use('/api/usuarios', require('./routes/usuarios'))
-
-
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/proyectos', require('./routes/proyectos'))
 
 // Definir la pagina principal
 app.get('/', (req, res) => {
